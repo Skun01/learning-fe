@@ -27,8 +27,15 @@ function App() {
       <Toaster richColors position="top-right" />
       <BrowserRouter>
         <Routes>
-          {/* Public routes */}
-          <Route path="/" element={<HomePage />} />
+          {/* Public landing page (redirect to dashboard if logged in) */}
+          <Route
+            path="/"
+            element={
+              <GuestRoute>
+                <HomePage />
+              </GuestRoute>
+            }
+          />
 
           {/* Guest-only routes (redirect to dashboard if logged in) */}
           <Route
