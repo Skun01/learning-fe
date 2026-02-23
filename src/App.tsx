@@ -4,6 +4,8 @@ import { Toaster } from "sonner";
 
 import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
+import { ForgotPasswordPage } from "./pages/ForgotPasswordPage";
+import { ResetPasswordPage } from "./pages/ResetPasswordPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { DecksPage } from "./pages/DecksPage";
 import { HomePage } from "./pages/HomePage";
@@ -53,6 +55,22 @@ function App() {
             element={
               <GuestRoute>
                 <RegisterPage />
+              </GuestRoute>
+            }
+          />
+          <Route
+            path="/forgot-password"
+            element={
+              <GuestRoute>
+                <ForgotPasswordPage />
+              </GuestRoute>
+            }
+          />
+          <Route
+            path="/reset-password"
+            element={
+              <GuestRoute>
+                <ResetPasswordPage />
               </GuestRoute>
             }
           />

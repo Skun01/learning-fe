@@ -1,6 +1,6 @@
 import api from "./api";
 import type { ApiResponse } from "@/types/api";
-import type { AuthDTO, LoginRequest, RegisterRequest } from "@/types/auth";
+import type { AuthDTO, LoginRequest, RegisterRequest, ResetPasswordRequest } from "@/types/auth";
 
 /**
  * Auth API service — handles all authentication-related HTTP calls.
@@ -23,9 +23,13 @@ export const authService = {
     return api.post<ApiResponse<boolean>>("/auth/logout");
   },
 
-  forgetPassword(email: string) {
+  forgotPassword(email: string) {
     return api.post<ApiResponse<boolean>>(
-      `/auth/forget-password?email=${encodeURIComponent(email)}`
+      `/auth/forgot-password?email=${encodeURIComponent(email)}`
     );
   },
+
+  resetPassword(data: ResetPasswordRequest) {
+    return api.post<ApiResponse<boolean>>("/auth/reset-password", data)
+  }
 };

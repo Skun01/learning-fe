@@ -112,6 +112,16 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
           )}
         />
 
+        {/* Forgot password link */}
+        <div className="text-right">
+          <Link
+            to="/forgot-password"
+            className="text-sm text-primary underline-offset-4 hover:underline"
+          >
+            Quên mật khẩu?
+          </Link>
+        </div>
+
         {/* Submit */}
         <Button type="submit" className="w-full" disabled={isLoading}>
           {isLoading ? (
