@@ -5,9 +5,11 @@ import { Toaster } from "sonner";
 import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { DashboardPage } from "./pages/DashboardPage";
+import { DecksPage } from "./pages/DecksPage";
 import { HomePage } from "./pages/HomePage";
 import { ProtectedRoute } from "./components/layout/ProtectedRoute";
 import { GuestRoute } from "./components/layout/GuestRoute";
+import { DashboardLayout } from "./components/dashboard/DashboardLayout";
 import { useAuthStore } from "./stores/authStore";
 import { setupInterceptors } from "./services/setupInterceptors";
 
@@ -55,15 +57,18 @@ function App() {
             }
           />
 
-          {/* Protected routes (redirect to login if not logged in) */}
+          {/* Protected dashboard routes — nested under layout */}
           <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <DashboardPage />
+                <DashboardLayout />
               </ProtectedRoute>
             }
-          />
+          >
+            <Route index element={<DashboardPage />} />
+            <Route path="decks" element={<DecksPage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
