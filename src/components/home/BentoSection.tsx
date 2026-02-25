@@ -48,11 +48,11 @@ export function BentoSection() {
           {FEATURES.map((feature) => (
             <Card
               key={feature.title}
-              className="group border border-white/50 bg-white/50 backdrop-blur-lg hover:bg-white/70 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+              className="group border border-white/50 bg-white/50 backdrop-blur-lg hover:bg-white/70 hover:shadow-lg transition-all duration-300"
             >
               <CardHeader className="pb-2">
                 <div
-                  className={`inline-flex items-center justify-center h-11 w-11 rounded-xl ${feature.iconBg} group-hover:scale-110 transition-transform duration-300`}
+                  className={`inline-flex items-center justify-center h-11 w-11 rounded-xl ${feature.iconBg} group-hover:rotate-3 transition-transform duration-300`}
                 >
                   <feature.icon className={`h-5 w-5 ${feature.iconColor}`} />
                 </div>

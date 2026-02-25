@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { GraduationCap, Home, Layers, LogOut } from "lucide-react";
+import { GraduationCap, Home, Library, LogOut } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -18,7 +18,7 @@ import { useAuthStore } from "@/stores/authStore";
 
 const NAV_ITEMS = [
   { title: "Trang chủ", icon: Home, to: "/dashboard" },
-  { title: "Các thẻ của tôi", icon: Layers, to: "/dashboard/decks" },
+  { title: "Các thẻ của tôi", icon: Library, to: "/dashboard/decks" },
 ];
 
 function SidebarLogo() {

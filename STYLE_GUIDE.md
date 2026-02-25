@@ -2,7 +2,7 @@
 
 > File này ghi lại các quy tắc về phong cách code và thiết kế UI.
 > Khi bắt đầu đoạn chat mới hoặc dùng AI khác, hãy đọc file này trước.
->
+> Nếu trong quá trình code, có bất kì yêu cầu nào làm ảnh hưởng, định hình đến việc code thì lưu lại vào đây
 > **Cập nhật lần cuối**: 2026-02-23
 
 ---
@@ -35,6 +35,14 @@ bg-white/50 backdrop-blur-xl border border-white/50 shadow-xl
 - Phía sau cần có **color blobs** (`bg-primary/5`, `bg-accent/10`, `blur-3xl`) để hiệu ứng rõ
 - Dùng cho: form cards, feature cards, illustration wrapper
 - **KHÔNG dùng** cho footer, navbar (navbar dùng `bg-white/80 backdrop-blur-lg` khi scroll)
+
+### Hover Animation
+
+- **KHÔNG dùng `hover:scale`** cho button hay element khi hover. Thay vào đó dùng:
+  - `hover:shadow-md` / `hover:shadow-sm` — thêm bóng nhẹ
+  - `active:brightness-95` — tối nhẹ khi nhấn
+  - `hover:bg-...` / `hover:text-...` — đổi màu nền/chữ
+  - `group-hover:rotate-3` — xoay nhẹ cho icon decorative
 
 ### CSS Variables
 

@@ -8,6 +8,8 @@ import { ForgotPasswordPage } from "./pages/ForgotPasswordPage";
 import { ResetPasswordPage } from "./pages/ResetPasswordPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { DecksPage } from "./pages/DecksPage";
+import { DeckDetailPage } from "./pages/DeckDetailPage";
+import { CardDetailPage } from "./pages/CardDetailPage";
 import { HomePage } from "./pages/HomePage";
 import { ProtectedRoute } from "./components/layout/ProtectedRoute";
 import { GuestRoute } from "./components/layout/GuestRoute";
@@ -86,6 +88,8 @@ function App() {
           >
             <Route index element={<DashboardPage />} />
             <Route path="decks" element={<DecksPage />} />
+            <Route path="decks/:id" element={<DeckDetailPage />} />
+            <Route path="decks/:deckId/cards/:cardId" element={<CardDetailPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
