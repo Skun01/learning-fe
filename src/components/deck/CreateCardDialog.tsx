@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import { Loader2, BookType, BookA, FileText, MessageSquareText } from "lucide-react";
+import { SpinnerGap as Loader2, BookBookmark as BookType, BookOpen as BookA, FileText, ChatText as MessageSquareText } from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -62,7 +62,9 @@ export function CreateCardDialog({
         {/* Header */}
         <SheetHeader className="px-6 pt-6 pb-0">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary shrink-0">
+            <div className={`flex h-10 w-10 items-center justify-center rounded-xl shrink-0 ${
+              isVocab ? "bg-theme-vocab-light text-theme-vocab" : "bg-theme-grammar-light text-theme-grammar"
+            }`}>
               {isVocab ? (
                 <BookA className="h-5 w-5" />
               ) : (

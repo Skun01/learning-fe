@@ -6,17 +6,17 @@ import { toast } from "sonner";
 import {
   ArrowLeft,
   ArrowUp,
-  ChevronLeft,
-  ChevronRight,
-  ChevronDown,
+  CaretLeft as ChevronLeft,
+  CaretRight as ChevronRight,
+  CaretDown as ChevronDown,
   Lightbulb,
-  BookType,
-  BookA,
-  Pencil,
-  Trash2,
+  BookBookmark as BookType,
+  BookOpen as BookA,
+  PencilSimple as Pencil,
+  Trash as Trash2,
   Check,
   X,
-} from "lucide-react";
+} from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -260,11 +260,18 @@ export function CardDetailPage() {
         >
           {/* Background decoration */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-primary/5 blur-3xl" />
+            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full blur-3xl ${
+              isVocab ? "bg-primary/5" : "bg-theme-grammar/5"
+            }`} />
+            <div className={`absolute top-1/3 right-1/4 w-48 h-48 rounded-full blur-3xl ${
+              isVocab ? "bg-theme-grammar/3" : "bg-primary/3"
+            }`} />
           </div>
 
           {/* Type icon */}
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
+          <div className={`flex h-10 w-10 items-center justify-center rounded-xl mb-4 ${
+            isVocab ? "bg-theme-vocab-light text-theme-vocab" : "bg-theme-grammar-light text-theme-grammar"
+          }`}>
             {isVocab ? (
               <BookA className="h-5 w-5" />
             ) : (

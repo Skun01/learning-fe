@@ -5,13 +5,13 @@ import { Link, useNavigate } from "react-router";
 import { toast } from "sonner";
 import {
   Eye,
-  EyeOff,
-  Loader2,
+  EyeSlash as EyeOff,
+  SpinnerGap as Loader2,
   UserPlus,
-  Mail,
+  EnvelopeSimple as Mail,
   Lock,
   User,
-} from "lucide-react";
+} from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

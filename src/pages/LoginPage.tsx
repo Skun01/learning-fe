@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap } from "@phosphor-icons/react";
 import {
   Card,
   CardContent,

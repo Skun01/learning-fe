@@ -1,18 +1,19 @@
-import type { LucideIcon } from "lucide-react";
+import type { ComponentType } from "react";
+type IconComponent = ComponentType<{ className?: string }>;
 import {
-  BookOpen,
+  BookOpenText as BookOpen,
   Brain,
   Globe,
-  PenLine,
+  PenNib as PenLine,
   UserPlus,
   FolderPlus,
-  Repeat,
-} from "lucide-react";
+  ArrowsClockwise as Repeat,
+} from "@phosphor-icons/react";
 
 // ─── Types ──────────────────────────────────────────────────
 
 export interface Feature {
-  icon: LucideIcon;
+  icon: IconComponent;
   title: string;
   description: string;
   iconBg: string;
@@ -20,7 +21,7 @@ export interface Feature {
 }
 
 export interface Step {
-  icon: LucideIcon;
+  icon: IconComponent;
   step: string;
   title: string;
   description: string;
@@ -59,32 +60,32 @@ export const FEATURES: Feature[] = [
     title: "Tạo bộ thẻ linh hoạt",
     description:
       "Tổ chức từ vựng và ngữ pháp thành các bộ thẻ riêng biệt, dễ quản lý.",
-    iconBg: "bg-violet-50",
-    iconColor: "text-violet-600",
+    iconBg: "bg-primary/10",
+    iconColor: "text-primary",
   },
   {
     icon: Brain,
     title: "Ghi nhớ thông minh",
     description:
       "Hệ thống flashcard giúp bạn ôn tập đúng lúc, ghi nhớ lâu hơn.",
-    iconBg: "bg-fuchsia-50",
-    iconColor: "text-fuchsia-600",
+    iconBg: "bg-theme-grammar-light",
+    iconColor: "text-theme-grammar",
   },
   {
     icon: Globe,
     title: "Đa ngôn ngữ",
     description:
       "Hỗ trợ mọi ngôn ngữ — tiếng Anh, Nhật, Hàn, Pháp, và nhiều hơn nữa.",
-    iconBg: "bg-teal-50",
-    iconColor: "text-teal-600",
+    iconBg: "bg-accent",
+    iconColor: "text-accent-foreground",
   },
   {
     icon: PenLine,
     title: "Câu ví dụ tương tác",
     description:
       "Luyện tập với bài tập điền vào chỗ trống, hiểu ngữ cảnh thực tế.",
-    iconBg: "bg-amber-50",
-    iconColor: "text-amber-600",
+    iconBg: "bg-theme-highlight",
+    iconColor: "text-primary",
   },
 ];
 

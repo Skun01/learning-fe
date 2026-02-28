@@ -2,7 +2,7 @@
 
 > **Mục đích**: File tham chiếu nhanh cho AI hoặc developer mới. Đọc file này thay vì phải scan toàn bộ project.
 >
-> **Cập nhật lần cuối**: 2026-02-23
+> **Cập nhật lần cuối**: 2026-02-28
 
 ---
 
@@ -15,7 +15,7 @@
 | Language   | TypeScript                            | 5.9                |
 | Styling    | TailwindCSS v4 (Vite plugin)          | 4.1                |
 | UI Library | shadcn/ui (new-york style)            | via `radix-ui` 1.4 |
-| Icons      | lucide-react                          | 0.563              |
+| Icons      | @phosphor-icons/react                 | 2.x                |
 | Routing    | react-router                          | 7.13               |
 | State      | Zustand                               | 5.0                |
 | HTTP       | Axios                                 | 1.13               |
@@ -32,13 +32,13 @@ LearningFE/
 ├── index.html                # Vite entry HTML
 ├── vite.config.ts            # Vite + TailwindCSS plugin + path alias @/
 ├── tsconfig.app.json         # TS config — strict, paths: @/* → ./src/*
-├── components.json           # shadcn config — new-york, lucide, aliases
+├── components.json           # shadcn config — new-york, phosphor, aliases
 ├── package.json
 │
 └── src/
     ├── main.tsx              # React root render (StrictMode)
     ├── App.tsx               # BrowserRouter, Routes, Toaster, auth init
-    ├── index.css             # TailwindCSS imports, CSS variables (Violet & Teal theme)
+    ├── index.css             # TailwindCSS imports, CSS variables (Midnight Blue & Ice Gray theme)
     │
     ├── components/
     │   ├── ui/               # shadcn components (button, input, label, card, form)
@@ -95,16 +95,16 @@ LearningFE/
 
 - Style: `new-york`
 - RSC: `false` (client-side React)
-- Icon library: `lucide`
+- Icon library: `@phosphor-icons/react`
 - UI components path: `@/components/ui`
 - Cài thêm component: `npx shadcn@latest add <component-name>`
 
 ### CSS Theme (`index.css`)
 
-- Color scheme: **Violet & Teal**
-- Primary: `oklch(0.51 0.24 295)` ≈ `#7c3aed` (Violet 600)
-- Accent: `oklch(0.72 0.14 180)` ≈ `#14b8a6` (Teal 500)
-- CSS variables theo chuẩn shadcn (background, foreground, card, primary, etc.)
+- Color scheme: **Midnight Blue & Ice Gray**
+- Primary: `oklch(0.25 0.11 264)` ≈ `#191970` (Midnight Blue)
+- Accent: `oklch(0.94 0.005 250)` ≈ `#ECEFF1` (Ice Gray / Blue Gray 50)
+- CSS variables theo chuẩn shadcn + semantic theme tokens (vocabulary, grammar, highlight)
 - Dark mode variables đã có nhưng chưa kích hoạt
 
 ---
@@ -197,11 +197,11 @@ Component → authStore (Zustand) → authService → api (Axios) → Backend
 ## 6. UI / Design Conventions
 
 - **Ngôn ngữ UI**: Tiếng Việt (labels, placeholders, errors, toast messages)
-- **Color theme**: Violet & Teal (xem section 3)
+- **Color theme**: Midnight Blue & Ice Gray (xem section 3)
 - **Auth pages**: Split-screen layout (illustration bên trái, form bên phải)
 - **Homepage**: Landing page với Hero, Features grid, How-it-works, CTA banner, Footer
 - **Component library**: shadcn/ui — cài qua `npx shadcn@latest add <name>`
-- **Icons**: lucide-react
+- **Icons**: @phosphor-icons/react
 - **Class names**: Tailwind utility classes, cn() helper để merge conditionally
 
 ---

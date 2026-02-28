@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,37 +13,46 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --radius: 0.625rem;
-  --background: oklch(0.985 0.002 290);
-  --foreground: oklch(0.145 0.02 285);
+
+  /* ── Core palette: Midnight Blue (#191970) + Ice Gray (#ECEFF1) ── */
+  --background: oklch(0.985 0.003 250);
+  --foreground: oklch(0.16 0.04 264);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0.02 285);
+  --card-foreground: oklch(0.16 0.04 264);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0.02 285);
-  --primary: oklch(0.51 0.24 295);
+  --popover-foreground: oklch(0.16 0.04 264);
+  --primary: oklch(0.25 0.11 264);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.01 290);
-  --secondary-foreground: oklch(0.35 0.08 285);
-  --muted: oklch(0.96 0.005 290);
-  --muted-foreground: oklch(0.5 0.02 285);
-  --accent: oklch(0.95 0.02 290);
-  --accent-foreground: oklch(0.25 0.06 285);
+  --secondary: oklch(0.94 0.005 250);
+  --secondary-foreground: oklch(0.3 0.06 264);
+  --muted: oklch(0.95 0.004 250);
+  --muted-foreground: oklch(0.5 0.02 264);
+  --accent: oklch(0.94 0.005 250);
+  --accent-foreground: oklch(0.22 0.08 264);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.005 290);
-  --input: oklch(0.92 0.005 290);
-  --ring: oklch(0.65 0.18 295);
-  --chart-1: oklch(0.51 0.24 295);
-  --chart-2: oklch(0.78 0.16 85);
-  --chart-3: oklch(0.65 0.2 330);
-  --chart-4: oklch(0.72 0.14 175);
-  --chart-5: oklch(0.6 0.18 30);
-  --sidebar: oklch(0.985 0.002 290);
-  --sidebar-foreground: oklch(0.145 0.02 285);
-  --sidebar-primary: oklch(0.51 0.24 295);
+  --border: oklch(0.91 0.005 250);
+  --input: oklch(0.91 0.005 250);
+  --ring: oklch(0.38 0.1 264);
+  --chart-1: oklch(0.25 0.11 264);
+  --chart-2: oklch(0.55 0.12 230);
+  --chart-3: oklch(0.65 0.1 200);
+  --chart-4: oklch(0.72 0.08 250);
+  --chart-5: oklch(0.45 0.14 264);
+  --sidebar: oklch(0.985 0.003 250);
+  --sidebar-foreground: oklch(0.16 0.04 264);
+  --sidebar-primary: oklch(0.25 0.11 264);
   --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.96 0.01 290);
-  --sidebar-accent-foreground: oklch(0.35 0.08 285);
-  --sidebar-border: oklch(0.92 0.005 290);
-  --sidebar-ring: oklch(0.51 0.24 295);
+  --sidebar-accent: oklch(0.94 0.005 250);
+  --sidebar-accent-foreground: oklch(0.3 0.06 264);
+  --sidebar-border: oklch(0.91 0.005 250);
+  --sidebar-ring: oklch(0.25 0.11 264);
+
+  /* ── Semantic theme tokens — for future theme extensibility ── */
+  --theme-vocab: oklch(0.25 0.11 264);
+  --theme-vocab-light: oklch(0.94 0.005 250);
+  --theme-grammar: oklch(0.5 0.1 230);
+  --theme-grammar-light: oklch(0.93 0.015 230);
+  --theme-highlight: oklch(0.94 0.005 250);
 }
 
 body {
@@ -91,40 +100,54 @@ body {
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* ── Semantic theme colors for Tailwind usage ── */
+  --color-theme-vocab: var(--theme-vocab);
+  --color-theme-vocab-light: var(--theme-vocab-light);
+  --color-theme-grammar: var(--theme-grammar);
+  --color-theme-grammar-light: var(--theme-grammar-light);
+  --color-theme-highlight: var(--theme-highlight);
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
+  --background: oklch(0.14 0.01 264);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
+  --card: oklch(0.2 0.015 264);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.21 0.006 285.885);
+  --popover: oklch(0.2 0.015 264);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.92 0.004 286.32);
-  --primary-foreground: oklch(0.21 0.006 285.885);
-  --secondary: oklch(0.274 0.006 286.033);
+  --primary: oklch(0.8 0.06 250);
+  --primary-foreground: oklch(0.16 0.04 264);
+  --secondary: oklch(0.27 0.01 264);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
+  --muted: oklch(0.27 0.01 264);
+  --muted-foreground: oklch(0.7 0.015 264);
+  --accent: oklch(0.27 0.01 264);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.552 0.016 285.938);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.21 0.006 285.885);
+  --ring: oklch(0.55 0.04 264);
+  --chart-1: oklch(0.5 0.12 264);
+  --chart-2: oklch(0.6 0.1 230);
+  --chart-3: oklch(0.7 0.08 200);
+  --chart-4: oklch(0.55 0.14 250);
+  --chart-5: oklch(0.65 0.12 264);
+  --sidebar: oklch(0.2 0.015 264);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary: oklch(0.5 0.12 264);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent: oklch(0.27 0.01 264);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.552 0.016 285.938);
+  --sidebar-ring: oklch(0.55 0.04 264);
+
+  /* ── Dark mode semantic tokens ── */
+  --theme-vocab: oklch(0.7 0.08 264);
+  --theme-vocab-light: oklch(0.27 0.02 264);
+  --theme-grammar: oklch(0.65 0.08 230);
+  --theme-grammar-light: oklch(0.27 0.02 230);
+  --theme-highlight: oklch(0.27 0.01 264);
 }
 
 @layer base {
@@ -154,7 +177,7 @@ body {
   background: linear-gradient(
     90deg,
     var(--muted) 25%,
-    oklch(0.94 0.005 290 / 60%) 37%,
+    oklch(0.93 0.004 250 / 60%) 37%,
     var(--muted) 63%
   );
   background-size: 200% 100%;
@@ -164,9 +187,9 @@ body {
 .dark .animate-shimmer {
   background: linear-gradient(
     90deg,
-    oklch(0.25 0.006 286) 25%,
-    oklch(0.32 0.008 286 / 60%) 37%,
-    oklch(0.25 0.006 286) 63%
+    oklch(0.24 0.01 264) 25%,
+    oklch(0.3 0.015 264 / 60%) 37%,
+    oklch(0.24 0.01 264) 63%
   );
   background-size: 200% 100%;
 }

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link } from "react-router";
 import { toast } from "sonner";
-import { Loader2, Mail, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { SpinnerGap as Loader2, EnvelopeSimple as Mail, ArrowLeft, CheckCircle as CheckCircle2 } from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

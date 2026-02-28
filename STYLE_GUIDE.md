@@ -3,25 +3,26 @@
 > File này ghi lại các quy tắc về phong cách code và thiết kế UI.
 > Khi bắt đầu đoạn chat mới hoặc dùng AI khác, hãy đọc file này trước.
 > Nếu trong quá trình code, có bất kì yêu cầu nào làm ảnh hưởng, định hình đến việc code thì lưu lại vào đây
-> **Cập nhật lần cuối**: 2026-02-23
+> **Cập nhật lần cuối**: 2026-02-28
 
 ---
 
 ## 1. Quy tắc màu sắc
 
-### Color Theory: Complementary
+### Color Theory: Midnight Blue + Ice Gray
 
-Sử dụng **bảng màu đối xứng (Complementary)** — hai màu đối diện trên vòng tròn màu.
+Sử dụng **bảng màu tương phản đậm-nhạt** — tông xanh đen chuyên nghiệp, kết hợp xám xanh sáng tạo cảm giác elegant.
 
-- **Primary**: Violet (`#7c3aed` / violet-600)
-- **Complementary**: Amber/Gold (`#f59e0b` / amber-500)
+- **Primary**: Midnight Blue (`#191970`)
+- **Accent/Background**: Ice Gray (`#ECEFF1` / Blue Gray 50)
 
 ### Quy tắc áp dụng
 
 - **KHÔNG dùng gradient** cho background chính hoặc button. Dùng màu solid.
 - Primary dùng cho: buttons, links, active states, badges
-- Complementary dùng cho: highlights, accents, decorations, icons nổi bật
+- Accent (Ice Gray) dùng cho: secondary surfaces, card backgrounds nhẹ, decorations
 - Neutral: gray scale cho text, borders, backgrounds
+- **KHÔNG dùng hardcoded Tailwind color** (vd: `bg-violet-100`, `text-amber-600`). Luôn dùng semantic tokens.
 
 ### Glassmorphism
 
@@ -47,6 +48,18 @@ bg-white/50 backdrop-blur-xl border border-white/50 shadow-xl
 ### CSS Variables
 
 Tất cả màu được định nghĩa tại `src/index.css` dưới dạng CSS variables theo chuẩn shadcn/ui.
+
+### Semantic Theme Tokens
+
+Để hỗ trợ phát triển theme system sau này, dùng **semantic tokens** thay vì hardcoded colors:
+
+| Token               | Mục đích                 | Ví dụ class                                    |
+| ------------------- | ------------------------ | ---------------------------------------------- |
+| `--theme-vocab`     | Màu cho Vocabulary cards | `text-theme-vocab`, `bg-theme-vocab-light`     |
+| `--theme-grammar`   | Màu cho Grammar cards    | `text-theme-grammar`, `bg-theme-grammar-light` |
+| `--theme-highlight` | Trang trí, decorative    | `bg-theme-highlight`                           |
+
+Khi cần phân biệt loại card (Vocabulary vs Grammar), luôn dùng các token trên thay vì hardcoded Tailwind colors.
 
 ---
 
@@ -75,7 +88,7 @@ Homepage sử dụng **Bento Box layout** (inspirated by Apple, Linear):
 
 - **BẮT BUỘC** ưu tiên dùng component từ shadcn/ui thay vì tự code HTML.
 - Cài component mới: `npx shadcn@latest add <component-name>`
-- Style: `new-york`, Icon library: `lucide-react`
+- Style: `new-york`, Icon library: `@phosphor-icons/react`
 
 ### Naming
 
@@ -108,12 +121,13 @@ Homepage sử dụng **Bento Box layout** (inspirated by Apple, Linear):
 
 ## 6. Tổng kết quy tắc
 
-| Hạng mục   | Quy tắc                                        |
-| ---------- | ---------------------------------------------- |
-| Màu sắc    | Complementary (Violet + Amber), KHÔNG gradient |
-| Background | Glassmorphism (frosted glass + color blobs)    |
-| Layout     | Bento Box (grid bất đối xứng)                  |
-| Components | Ưu tiên shadcn/ui                              |
-| Text/Data  | Tách vào `src/constants/`                      |
-| Ngôn ngữ   | Tiếng Việt                                     |
-| Token      | In-memory + HttpOnly cookie                    |
+| Hạng mục   | Quy tắc                                                      |
+| ---------- | ------------------------------------------------------------ |
+| Màu sắc    | Midnight Blue (#191970) + Ice Gray (#ECEFF1), KHÔNG gradient |
+| Background | Glassmorphism (frosted glass + color blobs)                  |
+| Layout     | Bento Box (grid bất đối xứng)                                |
+| Components | Ưu tiên shadcn/ui                                            |
+| Text/Data  | Tách vào `src/constants/`                                    |
+| Ngôn ngữ   | Tiếng Việt                                                   |
+| Token      | In-memory + HttpOnly cookie                                  |
+| Theme      | Dùng semantic tokens, KHÔNG hardcode Tailwind colors         |

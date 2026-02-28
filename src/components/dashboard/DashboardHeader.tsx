@@ -1,4 +1,4 @@
-import { Search, Bell } from "lucide-react";
+import { MagnifyingGlass as Search, Bell } from "@phosphor-icons/react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";

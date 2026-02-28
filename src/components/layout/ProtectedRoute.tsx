@@ -1,6 +1,6 @@
 import { Navigate } from "react-router";
 import { useAuthStore } from "@/stores/authStore";
-import { Loader2 } from "lucide-react";
+import { SpinnerGap as Loader2 } from "@phosphor-icons/react";
 
 interface ProtectedRouteProps {
   children: React.ReactNode;

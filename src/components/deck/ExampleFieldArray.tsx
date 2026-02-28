@@ -1,4 +1,4 @@
-import { Plus, Trash2, Eye } from "lucide-react";
+import { Plus, Trash as Trash2, Eye } from "@phosphor-icons/react";
 import { useFieldArray, useWatch, type Control } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";

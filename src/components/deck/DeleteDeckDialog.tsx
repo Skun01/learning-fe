@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
+import { SpinnerGap as Loader2 } from "@phosphor-icons/react";
 
 import {
   AlertDialog,

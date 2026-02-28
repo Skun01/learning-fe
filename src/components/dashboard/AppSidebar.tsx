@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { GraduationCap, Home, Library, LogOut } from "lucide-react";
+import { GraduationCap, House as Home, Books as Library, SignOut as LogOut } from "@phosphor-icons/react";
 import {
   Sidebar,
   SidebarContent,

@@ -1,4 +1,4 @@
-import { GraduationCap, Mail, Phone, User, BookOpen, Brain, Sparkles } from "lucide-react";
+import { GraduationCap, EnvelopeSimple as Mail, Phone, User, BookOpenText as BookOpen, Brain, Sparkle as Sparkles } from "@phosphor-icons/react";
 import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { APP_NAME, FOOTER_CONTACT } from "@/constants/homepage";

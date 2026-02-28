@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { BookA, BookType, MoreVertical, Pencil, Trash2 } from "lucide-react";
+import { BookOpen as BookA, BookBookmark as BookType, DotsThreeVertical as MoreVertical, PencilSimple as Pencil, Trash as Trash2 } from "@phosphor-icons/react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -38,7 +38,9 @@ export function DeckCard({ deck, onEdit, onDelete, staggerClass }: DeckCardProps
       <CardContent className="p-5">
         {/* Header: icon + menu */}
         <div className="flex items-start justify-between mb-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-transform duration-300 group-hover:rotate-3">
+          <div className={`flex h-10 w-10 items-center justify-center rounded-lg transition-transform duration-300 group-hover:rotate-3 ${
+            isVocab ? "bg-theme-vocab-light text-theme-vocab" : "bg-theme-grammar-light text-theme-grammar"
+          }`}>
             {isVocab ? (
               <BookA className="h-5 w-5" />
             ) : (
@@ -88,7 +90,11 @@ export function DeckCard({ deck, onEdit, onDelete, staggerClass }: DeckCardProps
 
         {/* Badge + card count */}
         <div className="flex items-center gap-2 mb-3">
-          <Badge variant={isVocab ? "default" : "secondary"}>
+          <Badge className={
+            isVocab
+              ? "bg-theme-vocab-light text-theme-vocab hover:bg-theme-vocab-light"
+              : "bg-theme-grammar-light text-theme-grammar hover:bg-theme-grammar-light"
+          }>
             {isVocab ? "Từ vựng" : "Ngữ pháp"}
           </Badge>
           <span className="text-sm text-muted-foreground">

@@ -16,13 +16,13 @@ export function StudyIllustration({ className }: { className?: string }) {
       <rect x="368" y="292" width="12" height="60" rx="4" fill="#a78bfa" />
 
       {/* Laptop */}
-      <rect x="180" y="220" width="140" height="60" rx="6" fill="#7c3aed" />
+      <rect x="180" y="220" width="140" height="60" rx="6" fill="#191970" />
       <rect x="188" y="228" width="124" height="44" rx="3" fill="#ede9fe" />
       {/* Screen content — globe icon representing all languages */}
-      <circle cx="250" cy="250" r="14" stroke="#7c3aed" strokeWidth="2" fill="none" />
-      <ellipse cx="250" cy="250" rx="6" ry="14" stroke="#7c3aed" strokeWidth="1.5" fill="none" />
-      <line x1="236" y1="250" x2="264" y2="250" stroke="#7c3aed" strokeWidth="1.5" />
-      <line x1="250" y1="236" x2="250" y2="264" stroke="#7c3aed" strokeWidth="1.5" />
+      <circle cx="250" cy="250" r="14" stroke="#191970" strokeWidth="2" fill="none" />
+      <ellipse cx="250" cy="250" rx="6" ry="14" stroke="#191970" strokeWidth="1.5" fill="none" />
+      <line x1="236" y1="250" x2="264" y2="250" stroke="#191970" strokeWidth="1.5" />
+      <line x1="250" y1="236" x2="250" y2="264" stroke="#191970" strokeWidth="1.5" />
       {/* Laptop base */}
       <path d="M165 280 L180 270 L320 270 L335 280 Z" fill="#a78bfa" />
 
@@ -70,7 +70,7 @@ export function StudyIllustration({ className }: { className?: string }) {
       <path d="M242 163 Q250 170 258 163" stroke="#1e293b" strokeWidth="2" fill="none" strokeLinecap="round" />
 
       {/* Person — Body */}
-      <path d="M230 180 Q250 195 270 180 L275 230 L225 230 Z" fill="#7c3aed" />
+      <path d="M230 180 Q250 195 270 180 L275 230 L225 230 Z" fill="#191970" />
       {/* Arms */}
       <path d="M230 195 Q200 210 195 240" stroke="#fcd34d" strokeWidth="8" fill="none" strokeLinecap="round" />
       <path d="M270 195 Q300 210 305 240" stroke="#fcd34d" strokeWidth="8" fill="none" strokeLinecap="round" />

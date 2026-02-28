@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { MagnifyingGlass as Search } from "@phosphor-icons/react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 

@@ -3,12 +3,12 @@ import { useParams, useNavigate } from "react-router";
 import { toast } from "sonner";
 import {
   ArrowLeft,
-  Pencil,
-  Trash2,
+  PencilSimple as Pencil,
+  Trash as Trash2,
   Plus,
-  BookA,
-  BookType,
-} from "lucide-react";
+  BookOpen as BookA,
+  BookBookmark as BookType,
+} from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -123,7 +123,9 @@ export function DeckDetailPage() {
 
         {/* Deck info */}
         <div className="flex items-center gap-4">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary shrink-0">
+          <div className={`flex h-12 w-12 items-center justify-center rounded-xl shrink-0 ${
+            isVocab ? "bg-theme-vocab-light text-theme-vocab" : "bg-theme-grammar-light text-theme-grammar"
+          }`}>
             {isVocab ? (
               <BookA className="h-6 w-6" />
             ) : (
@@ -135,7 +137,11 @@ export function DeckDetailPage() {
               {deck.name}
             </h1>
             <div className="flex items-center gap-2 mt-1">
-              <Badge variant={isVocab ? "default" : "secondary"}>
+              <Badge className={
+                isVocab
+                  ? "bg-theme-vocab-light text-theme-vocab hover:bg-theme-vocab-light"
+                  : "bg-theme-grammar-light text-theme-grammar hover:bg-theme-grammar-light"
+              }>
                 {isVocab ? "Từ vựng" : "Ngữ pháp"}
               </Badge>
               <span className="text-sm text-muted-foreground">

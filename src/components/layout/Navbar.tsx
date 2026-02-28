@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { GraduationCap, List as Menu, X } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { APP_NAME } from "@/constants/homepage";
