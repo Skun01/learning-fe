@@ -10,6 +10,8 @@ import { DashboardPage } from "./pages/DashboardPage";
 import { DecksPage } from "./pages/DecksPage";
 import { DeckDetailPage } from "./pages/DeckDetailPage";
 import { CardDetailPage } from "./pages/CardDetailPage";
+import { LearnPage } from "./pages/LearnPage";
+import { ReviewPage } from "./pages/ReviewPage";
 import { HomePage } from "./pages/HomePage";
 import { ProtectedRoute } from "./components/layout/ProtectedRoute";
 import { GuestRoute } from "./components/layout/GuestRoute";
@@ -91,6 +93,24 @@ function App() {
             <Route path="decks/:id" element={<DeckDetailPage />} />
             <Route path="decks/:deckId/cards/:cardId" element={<CardDetailPage />} />
           </Route>
+
+          {/* Full-screen study pages — outside dashboard layout for focus */}
+          <Route
+            path="/learn"
+            element={
+              <ProtectedRoute>
+                <LearnPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/review"
+            element={
+              <ProtectedRoute>
+                <ReviewPage />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </>

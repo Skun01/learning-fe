@@ -30,7 +30,12 @@ export type ApiErrorCode =
   | "Common_505"
   | "Invalid_400"
   | "Email_Exist_409"
-  | "Token_Expried_409";
+  | "Token_Expried_409"
+  | "Queue_Exist_409"
+  | "Queue_NotFound_404"
+  | "Learn_Empty_404"
+  | "Learn_Already_409"
+  | "Review_Empty_404";
 
 /**
  * Map backend error codes → Vietnamese user-facing messages
@@ -44,6 +49,11 @@ export const ERROR_MESSAGES: Record<ApiErrorCode, string> = {
   Invalid_400: "Email hoặc mật khẩu không đúng",
   Email_Exist_409: "Email đã được sử dụng",
   Token_Expried_409: "Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại",
+  Queue_Exist_409: "Bộ thẻ này đã có trong hàng đợi",
+  Queue_NotFound_404: "Bộ thẻ không có trong hàng đợi",
+  Learn_Empty_404: "Không còn thẻ nào để học",
+  Learn_Already_409: "Thẻ này đã được đánh dấu học rồi",
+  Review_Empty_404: "Không có thẻ nào cần ôn tập",
 };
 
 /**

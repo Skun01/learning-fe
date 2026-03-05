@@ -1,5 +1,10 @@
 import { Link, useLocation } from "react-router";
-import { GraduationCap, House as Home, Books as Library, SignOut as LogOut } from "@phosphor-icons/react";
+import {
+  GraduationCap,
+  House as Home,
+  Books as Library,
+  SignOut as LogOut,
+} from "@phosphor-icons/react";
 import {
   Sidebar,
   SidebarContent,
