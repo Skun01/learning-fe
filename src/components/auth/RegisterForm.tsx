@@ -5,13 +5,13 @@ import { Link, useNavigate } from "react-router";
 import { toast } from "sonner";
 import {
   Eye,
-  EyeOff,
-  Loader2,
+  EyeSlash,
+  SpinnerGap,
   UserPlus,
-  Mail,
+  EnvelopeSimple,
   Lock,
   User,
-} from "lucide-react";
+} from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -98,7 +98,7 @@ export function RegisterForm() {
               <FormLabel>Email</FormLabel>
               <FormControl>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                  <EnvelopeSimple className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                   <Input
                     type="email"
                     placeholder="you@example.com"
@@ -139,7 +139,7 @@ export function RegisterForm() {
                     tabIndex={-1}
                   >
                     {showPassword ? (
-                      <EyeOff className="h-4 w-4" />
+                      <EyeSlash className="h-4 w-4" />
                     ) : (
                       <Eye className="h-4 w-4" />
                     )}
@@ -178,7 +178,7 @@ export function RegisterForm() {
                     tabIndex={-1}
                   >
                     {showConfirmPassword ? (
-                      <EyeOff className="h-4 w-4" />
+                      <EyeSlash className="h-4 w-4" />
                     ) : (
                       <Eye className="h-4 w-4" />
                     )}
@@ -193,7 +193,7 @@ export function RegisterForm() {
         {/* Submit */}
         <Button type="submit" className="w-full" disabled={isLoading}>
           {isLoading ? (
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            <SpinnerGap className="mr-2 h-4 w-4 animate-spin" />
           ) : (
             <UserPlus className="mr-2 h-4 w-4" />
           )}

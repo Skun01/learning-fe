@@ -1,4 +1,4 @@
-import { GraduationCap } from "lucide-react";
+import { AppLogo } from "@/components/illustrations/AppLogo";
 import {
   Card,
   CardContent,
@@ -39,9 +39,7 @@ export function RegisterPage() {
         <Card className="relative w-full max-w-md border border-white/60 bg-white/60 backdrop-blur-xl shadow-xl">
           <CardHeader className="space-y-4 text-center pb-2">
             {/* Logo */}
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-primary shadow-lg">
-              <GraduationCap className="h-6 w-6 text-primary-foreground" />
-            </div>
+            <AppLogo className="mx-auto h-12 w-12 rounded-xl shadow-lg" />
             <div>
               <CardTitle className="text-2xl font-bold tracking-tight">
                 Tạo tài khoản

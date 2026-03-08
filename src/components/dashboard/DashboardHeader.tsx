@@ -1,4 +1,4 @@
-import { Search, Bell } from "lucide-react";
+import { MagnifyingGlass, Bell } from "@phosphor-icons/react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -15,7 +15,7 @@ export function DashboardHeader() {
       {/* Search bar — center */}
       <div className="flex-1 max-w-md mx-auto hidden sm:block">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <MagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder="Tìm kiếm bộ thẻ, từ vựng..."
             className="pl-10 h-9 bg-secondary/50 border-border focus-visible:bg-background"
@@ -26,7 +26,7 @@ export function DashboardHeader() {
       {/* Right — notification + user */}
       <div className="flex items-center gap-1.5 ml-auto">
         <Button variant="ghost" size="icon" className="sm:hidden h-9 w-9">
-          <Search className="h-4 w-4" />
+          <MagnifyingGlass className="h-4 w-4" />
         </Button>
 
         <Button variant="ghost" size="icon" className="relative h-9 w-9">

@@ -1,12 +1,12 @@
-import { GraduationCap, Mail, Phone, User, BookOpen, Brain, Sparkles } from "lucide-react";
+import { EnvelopeSimple, Phone, User, BookOpen, Brain, Sparkle } from "@phosphor-icons/react";
+import { AppLogo } from "@/components/illustrations/AppLogo";
 import { Separator } from "@/components/ui/separator";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { APP_NAME, FOOTER_CONTACT } from "@/constants/homepage";
 
 const FOOTER_FEATURES = [
   { icon: BookOpen, label: "Bộ thẻ từ vựng" },
   { icon: Brain, label: "Ôn tập thông minh" },
-  { icon: Sparkles, label: "Flashcard tương tác" },
+  { icon: Sparkle, label: "Flashcard tương tác" },
 ];
 
 export function Footer() {
@@ -18,11 +18,7 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <Avatar className="h-9 w-9 rounded-lg">
-                <AvatarFallback className="rounded-lg bg-primary text-primary-foreground">
-                  <GraduationCap className="h-5 w-5" />
-                </AvatarFallback>
-              </Avatar>
+              <AppLogo className="h-9 w-9 rounded-lg" />
               <span className="text-xl font-bold text-white">{APP_NAME}</span>
             </div>
             <p className="text-sm leading-relaxed text-gray-500 max-w-xs">
@@ -60,7 +56,7 @@ export function Footer() {
                 <span>{FOOTER_CONTACT.phone}</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail className="h-4 w-4 text-primary/60 shrink-0" />
+                <EnvelopeSimple className="h-4 w-4 text-primary/60 shrink-0" />
                 <span>{FOOTER_CONTACT.email}</span>
               </li>
             </ul>

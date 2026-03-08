@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link } from "react-router";
 import { toast } from "sonner";
-import { Loader2, Mail, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { SpinnerGap, EnvelopeSimple, ArrowLeft, CheckCircle } from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -52,7 +52,7 @@ export function ForgotPasswordForm() {
     return (
       <div className="space-y-4 text-center">
         <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100">
-          <CheckCircle2 className="h-6 w-6 text-emerald-600" />
+          <CheckCircle className="h-6 w-6 text-emerald-600" />
         </div>
         <div>
           <h3 className="text-lg font-semibold text-foreground">
@@ -86,7 +86,7 @@ export function ForgotPasswordForm() {
               <FormLabel>Email</FormLabel>
               <FormControl>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                  <EnvelopeSimple className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                   <Input
                     type="email"
                     placeholder="you@example.com"
@@ -104,9 +104,9 @@ export function ForgotPasswordForm() {
 
         <Button type="submit" className="w-full" disabled={isLoading}>
           {isLoading ? (
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            <SpinnerGap className="mr-2 h-4 w-4 animate-spin" />
           ) : (
-            <Mail className="mr-2 h-4 w-4" />
+            <EnvelopeSimple className="mr-2 h-4 w-4" />
           )}
           Gửi liên kết đặt lại
         </Button>

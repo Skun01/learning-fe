@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link, useSearchParams } from "react-router";
 import { toast } from "sonner";
-import { Loader2, Lock, Eye, EyeOff, CheckCircle2, ArrowLeft } from "lucide-react";
+import { SpinnerGap, Lock, Eye, EyeSlash, CheckCircle, ArrowLeft } from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -81,7 +81,7 @@ export function ResetPasswordForm() {
     return (
       <div className="space-y-4 text-center">
         <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100">
-          <CheckCircle2 className="h-6 w-6 text-emerald-600" />
+          <CheckCircle className="h-6 w-6 text-emerald-600" />
         </div>
         <div>
           <h3 className="text-lg font-semibold text-foreground">
@@ -129,7 +129,7 @@ export function ResetPasswordForm() {
                     tabIndex={-1}
                   >
                     {showPassword ? (
-                      <EyeOff className="h-4 w-4" />
+                      <EyeSlash className="h-4 w-4" />
                     ) : (
                       <Eye className="h-4 w-4" />
                     )}
@@ -166,7 +166,7 @@ export function ResetPasswordForm() {
                     tabIndex={-1}
                   >
                     {showConfirm ? (
-                      <EyeOff className="h-4 w-4" />
+                      <EyeSlash className="h-4 w-4" />
                     ) : (
                       <Eye className="h-4 w-4" />
                     )}
@@ -180,7 +180,7 @@ export function ResetPasswordForm() {
 
         <Button type="submit" className="w-full" disabled={isLoading}>
           {isLoading ? (
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            <SpinnerGap className="mr-2 h-4 w-4 animate-spin" />
           ) : (
             <Lock className="mr-2 h-4 w-4" />
           )}

@@ -3,7 +3,7 @@
 > File này ghi lại các quy tắc về phong cách code và thiết kế UI.
 > Khi bắt đầu đoạn chat mới hoặc dùng AI khác, hãy đọc file này trước.
 >
-> **Cập nhật lần cuối**: 2026-02-23
+> **Cập nhật lần cuối**: 2026-03-08
 
 ---
 
@@ -13,8 +13,8 @@
 
 Sử dụng **bảng màu đối xứng (Complementary)** — hai màu đối diện trên vòng tròn màu.
 
-- **Primary**: Violet (`#7c3aed` / violet-600)
-- **Complementary**: Amber/Gold (`#f59e0b` / amber-500)
+- **Primary**: Deep Forest Green (`#102C26`)
+- **Complementary**: Warm Cream/Champagne (`#F7E7CE`)
 
 ### Quy tắc áp dụng
 
@@ -39,6 +39,19 @@ bg-white/50 backdrop-blur-xl border border-white/50 shadow-xl
 ### CSS Variables
 
 Tất cả màu được định nghĩa tại `src/index.css` dưới dạng CSS variables theo chuẩn shadcn/ui.
+
+### Font chữ
+
+Sử dụng **font stack** để tự động chọn font theo ngôn ngữ:
+
+```css
+font-family: "Nunito", "Kiwi Maru", system-ui, sans-serif;
+```
+
+- **Nunito**: Dùng cho tiếng Việt và ký tự Latin (weights: 400, 500, 600, 700)
+- **Kiwi Maru**: Dùng cho tiếng Nhật — Hiragana, Katakana, Kanji (weights: 300, 400, 500)
+- Trình duyệt tự động chọn font dựa trên Unicode range của từng ký tự
+- Load qua **Google Fonts** trong `index.html`
 
 ---
 
@@ -67,7 +80,7 @@ Homepage sử dụng **Bento Box layout** (inspirated by Apple, Linear):
 
 - **BẮT BUỘC** ưu tiên dùng component từ shadcn/ui thay vì tự code HTML.
 - Cài component mới: `npx shadcn@latest add <component-name>`
-- Style: `new-york`, Icon library: `lucide-react`
+- Style: `new-york`, Icon library: `@phosphor-icons/react`
 
 ### Naming
 
@@ -100,12 +113,13 @@ Homepage sử dụng **Bento Box layout** (inspirated by Apple, Linear):
 
 ## 6. Tổng kết quy tắc
 
-| Hạng mục   | Quy tắc                                        |
-| ---------- | ---------------------------------------------- |
-| Màu sắc    | Complementary (Violet + Amber), KHÔNG gradient |
-| Background | Glassmorphism (frosted glass + color blobs)    |
-| Layout     | Bento Box (grid bất đối xứng)                  |
-| Components | Ưu tiên shadcn/ui                              |
-| Text/Data  | Tách vào `src/constants/`                      |
-| Ngôn ngữ   | Tiếng Việt                                     |
-| Token      | In-memory + HttpOnly cookie                    |
+| Hạng mục   | Quy tắc                                                       |
+| ---------- | ------------------------------------------------------------- |
+| Màu sắc    | Complementary (Green #102C26 + Cream #F7E7CE), KHÔNG gradient |
+| Background | Glassmorphism (frosted glass + color blobs)                   |
+| Font chữ   | Nunito (Việt) + Kiwi Maru (Nhật), font stack                  |
+| Layout     | Bento Box (grid bất đối xứng)                                 |
+| Components | Ưu tiên shadcn/ui                                             |
+| Text/Data  | Tách vào `src/constants/`                                     |
+| Ngôn ngữ   | Tiếng Việt + Tiếng Nhật                                       |
+| Token      | In-memory + HttpOnly cookie                                   |

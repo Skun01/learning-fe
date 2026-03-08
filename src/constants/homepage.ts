@@ -1,18 +1,18 @@
-import type { LucideIcon } from "lucide-react";
+import type { Icon } from "@phosphor-icons/react";
 import {
   BookOpen,
   Brain,
   Globe,
-  PenLine,
+  PencilLine,
   UserPlus,
   FolderPlus,
-  Repeat,
-} from "lucide-react";
+  ArrowsClockwise,
+} from "@phosphor-icons/react";
 
 // ─── Types ──────────────────────────────────────────────────
 
 export interface Feature {
-  icon: LucideIcon;
+  icon: Icon;
   title: string;
   description: string;
   iconBg: string;
@@ -20,7 +20,7 @@ export interface Feature {
 }
 
 export interface Step {
-  icon: LucideIcon;
+  icon: Icon;
   step: string;
   title: string;
   description: string;
@@ -59,8 +59,8 @@ export const FEATURES: Feature[] = [
     title: "Tạo bộ thẻ linh hoạt",
     description:
       "Tổ chức từ vựng và ngữ pháp thành các bộ thẻ riêng biệt, dễ quản lý.",
-    iconBg: "bg-violet-50",
-    iconColor: "text-violet-600",
+    iconBg: "bg-emerald-50",
+    iconColor: "text-emerald-700",
   },
   {
     icon: Brain,
@@ -79,7 +79,7 @@ export const FEATURES: Feature[] = [
     iconColor: "text-teal-600",
   },
   {
-    icon: PenLine,
+    icon: PencilLine,
     title: "Câu ví dụ tương tác",
     description:
       "Luyện tập với bài tập điền vào chỗ trống, hiểu ngữ cảnh thực tế.",
@@ -108,7 +108,7 @@ export const STEPS: Step[] = [
     description: "Thêm từ vựng, ngữ pháp và câu ví dụ",
   },
   {
-    icon: Repeat,
+    icon: ArrowsClockwise,
     step: "03",
     title: "Học & ôn tập",
     description: "Ôn tập mỗi ngày với flashcard thông minh",

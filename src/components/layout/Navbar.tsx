@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { List, X } from "@phosphor-icons/react";
+import { AppLogo } from "@/components/illustrations/AppLogo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { APP_NAME } from "@/constants/homepage";
@@ -28,9 +29,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary shadow-md">
-              <GraduationCap className="h-5 w-5 text-primary-foreground" />
-            </div>
+            <AppLogo className="h-9 w-9 rounded-lg shadow-md" />
             <span className="text-xl font-bold text-foreground">
               {APP_NAME}
             </span>
@@ -51,7 +50,7 @@ export function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="sm:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
           >
-            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <List className="h-5 w-5" />}
           </button>
         </div>
 

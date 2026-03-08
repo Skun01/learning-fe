@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkle } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,7 +21,7 @@ export function HeroSection() {
           {/* Text */}
           <div className="flex-1 text-center lg:text-left">
             <Badge variant="secondary" className="mb-6 gap-2 px-4 py-1.5 text-sm">
-              <Sparkles className="h-3.5 w-3.5 text-accent-foreground" />
+              <Sparkle className="h-3.5 w-3.5 text-accent-foreground" />
               {HERO_CONTENT.badge}
             </Badge>
 

@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router";
-import { GraduationCap, Home, Layers, LogOut } from "lucide-react";
+import { House, Stack, SignOut } from "@phosphor-icons/react";
+import { AppLogo } from "@/components/illustrations/AppLogo";
 import {
   Sidebar,
   SidebarContent,
@@ -17,8 +18,8 @@ import { Separator } from "@/components/ui/separator";
 import { useAuthStore } from "@/stores/authStore";
 
 const NAV_ITEMS = [
-  { title: "Trang chủ", icon: Home, to: "/dashboard" },
-  { title: "Các thẻ của tôi", icon: Layers, to: "/dashboard/decks" },
+  { title: "Trang chủ", icon: House, to: "/dashboard" },
+  { title: "Các thẻ của tôi", icon: Stack, to: "/dashboard/decks" },
 ];
 
 function SidebarLogo() {
@@ -33,9 +34,7 @@ function SidebarLogo() {
           isCollapsed ? "justify-center p-2" : "gap-3 px-2 py-1.5"
         }`}
       >
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-          <GraduationCap className="h-4.5 w-4.5" />
-        </div>
+        <AppLogo className="h-8 w-8 shrink-0 rounded-lg" />
         {!isCollapsed && (
           <span className="text-base font-semibold text-foreground truncate">
             LearningApp
@@ -88,7 +87,7 @@ export function AppSidebar() {
               onClick={() => logout()}
               className="text-destructive hover:text-destructive"
             >
-              <LogOut className="h-4 w-4" />
+              <SignOut className="h-4 w-4" />
               <span>Đăng xuất</span>
             </SidebarMenuButton>
           </SidebarMenuItem>

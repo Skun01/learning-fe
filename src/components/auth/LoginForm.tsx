@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link } from "react-router";
 import { toast } from "sonner";
-import { Eye, EyeOff, Loader2, LogIn, Mail, Lock } from "lucide-react";
+import { Eye, EyeSlash, SpinnerGap, SignIn, EnvelopeSimple, Lock } from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -59,7 +59,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
               <FormLabel>Email</FormLabel>
               <FormControl>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                  <EnvelopeSimple className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                   <Input
                     type="email"
                     placeholder="you@example.com"
@@ -100,7 +100,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
                     tabIndex={-1}
                   >
                     {showPassword ? (
-                      <EyeOff className="h-4 w-4" />
+                      <EyeSlash className="h-4 w-4" />
                     ) : (
                       <Eye className="h-4 w-4" />
                     )}
@@ -125,9 +125,9 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
         {/* Submit */}
         <Button type="submit" className="w-full" disabled={isLoading}>
           {isLoading ? (
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            <SpinnerGap className="mr-2 h-4 w-4 animate-spin" />
           ) : (
-            <LogIn className="mr-2 h-4 w-4" />
+            <SignIn className="mr-2 h-4 w-4" />
           )}
           Đăng nhập
         </Button>
