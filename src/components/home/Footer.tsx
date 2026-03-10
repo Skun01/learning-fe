@@ -34,7 +34,7 @@ export function Footer() {
             <ul className="space-y-3">
               {FOOTER_FEATURES.map(({ icon: Icon, label }) => (
                 <li key={label} className="flex items-center gap-2.5 text-sm text-gray-500">
-                  <Icon className="h-4 w-4 text-primary/60 shrink-0" />
+                  <Icon className="h-4 w-4 text-accent shrink-0" />
                   <span>{label}</span>
                 </li>
               ))}
@@ -48,15 +48,15 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2.5">
-                <User className="h-4 w-4 text-primary/60 shrink-0" />
+                <User className="h-4 w-4 text-accent shrink-0" />
                 <span>{FOOTER_CONTACT.author}</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="h-4 w-4 text-primary/60 shrink-0" />
+                <Phone className="h-4 w-4 text-accent shrink-0" />
                 <span>{FOOTER_CONTACT.phone}</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <EnvelopeSimple className="h-4 w-4 text-primary/60 shrink-0" />
+                <EnvelopeSimple className="h-4 w-4 text-accent shrink-0" />
                 <span>{FOOTER_CONTACT.email}</span>
               </li>
             </ul>
